@@ -1,0 +1,9 @@
+<div class="btn-toolbar justify-content-between mb-3" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group" role="group" aria-label="First group">
+    <%= link_to 'Items', items_url, class: 'btn btn-outline-secondary' %>
+    <%= link_to 'Archived Items', url_for(controller: 'items', action: 'index', filter: 'archived'), class: 'btn btn-outline-secondary' %>
+  </div>
+  <div class="btn-group">
+    <%= link_to 'Add Item', new_item_url, class: 'btn btn-outline-secondary' %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expired_at: 2024-04-18
+  name: first_item
+
+two:
+  expired_at: 2024-04-18
+  name: second_item

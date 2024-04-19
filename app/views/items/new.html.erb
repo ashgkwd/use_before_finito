@@ -1,0 +1,13 @@
+<div class="container">
+  <%= form_with(model: @item, local: true) do |form| %>
+    <div class="mb-3">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "form-control", placeholder: "Enter item name" %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :expired_at %>
+      <%= form.date_field :expired_at, class: "form-control" %>
+    </div>
+    <%= form.submit "Save Item Expiry", class: "btn btn-primary" %>
+  <% end %>
+</div>
