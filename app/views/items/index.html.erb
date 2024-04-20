@@ -5,8 +5,7 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Created At</th>
-        <th>Expired At</th>
+        <th>Use Before</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -14,10 +13,9 @@
       <% @items.each do |item| %>
         <tr>
           <td><%= item.name %></td>
-          <td><%= item.created_at.strftime('%Y-%m-%d %H:%M:%S') %></td>
           <td>
             <span class="<%= color_of(item.expired_at) %>"><%= badge_of(item.expired_at) %></span>
-            <%= item.expired_at.strftime('%Y-%m-%d %H:%M:%S') %>
+            <%= sweet_date(item.expired_at) %>
           </td>
           <td>
             <%= render partial: "archive_action", locals: { item: } if item.archivable? %>
