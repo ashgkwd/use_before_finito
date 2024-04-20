@@ -9,7 +9,7 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <%= render partial: 'nav' %>
+    <%= render partial: 'application/nav' %>
     <section class="container">
       <% if notice %>
         <p class="alert alert-primary"><%= notice %></p>
@@ -18,6 +18,8 @@
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
     </section>
-    <%= yield %>
+    <section class="container">
+      <%= yield %>
+    </section>
   </body>
 </html>

@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!
   before_action :assign_item, only: [ :new, :destroy ]
 
   def create
