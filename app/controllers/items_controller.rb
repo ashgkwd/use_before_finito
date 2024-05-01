@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
 
   private
   def create_params
-    params.require(:item).permit(:expired_at, :name)
+    params.require(:item).permit(:expired_at, :name, :image)
   end
 
   def assign_item

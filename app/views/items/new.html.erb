@@ -8,6 +8,11 @@
       <%= form.label :expired_at %>
       <%= form.date_field :expired_at, class: "form-control" %>
     </div>
+    <div class="mb-3">
+      <%= form.label :image %>
+      <%= form.file_field :image, accept: "image/*", class: "form-control" %>
+      <small class="text-muted">Supported formats: JPEG, PNG, GIF, WebP, HEIC. Max file size: 2MB</small>
+    </div>
     <%= form.submit "Save Item Expiry", class: "btn btn-primary" %>
   <% end %>
 </div>
